@@ -18,11 +18,33 @@ public class Enemy : MonoBehaviour
 {
     public float speed = 1.0f;
     Vector3 dir = Vector3.down;
+    int randValue;
+    GameObject player;
 
+    private void Start()
+    {
+        randValue = Random.Range(0, 10); // 0 ~ 9 사이의 임의 값
+        player = GameObject.Find("Player");
+
+        if (randValue > 5)
+        {
+            if(player != null)
+            {
+                dir = (player.transform.position - gameObject.transform.position).normalized;
+            }
+        }
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if (randValue < 2)
+        {
+            if (player != null)
+            {
+                dir = (player.transform.position - gameObject.transform.position).normalized;
+            }
+        }
         transform.position += dir * speed * Time.deltaTime;
     }
 

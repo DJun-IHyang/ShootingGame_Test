@@ -22,18 +22,29 @@ public class EnemyManager : MonoBehaviour
     float currentTime;
     public float createTime;
 
+    public float minTime;
+    public float maxTime;
+
+    private void Start()
+    {
+        createTime = Random.Range(minTime, maxTime);
+    }
+
     // Update is called once per frame
     void Update()
     {
         currentTime = currentTime + Time.deltaTime;
+        /*currentTime += Time.deltaTime;*/
 
         print("currentTime" + currentTime);
 
         if(currentTime > createTime)
         {
+
             GameObject enemyGO = Instantiate(enemy);
             enemyGO.transform.position = transform.position;
 
+            //순서4. 시간을 초기화 해준다.
             currentTime = 0;
         }
 

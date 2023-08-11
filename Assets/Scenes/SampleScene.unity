@@ -188,6 +188,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 6874562975248599583, guid: aa6da1857d8564644816f39964275179, type: 3}
   createTime: 1
+  minTime: 3
+  maxTime: 5
 --- !u!4 &601897672
 Transform:
   m_ObjectHideFlags: 0
@@ -249,6 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 6874562975248599583, guid: aa6da1857d8564644816f39964275179, type: 3}
   createTime: 4
+  minTime: 4
+  maxTime: 6
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +485,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 6874562975248599583, guid: aa6da1857d8564644816f39964275179, type: 3}
   createTime: 3
+  minTime: 5
+  maxTime: 8
 --- !u!1001 &6015945277030925116
 PrefabInstance:
   m_ObjectHideFlags: 0
